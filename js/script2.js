@@ -18,6 +18,4 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // Actualizar la visibilidad del campo cada vez que se cambie la selección
     modalidad40Select.addEventListener('change', toggleAniosModalidad40);
-    
-  });
-
+});

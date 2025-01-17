@@ -1,0 +1,121 @@
+/* Estilo para la calculadora */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+.results-container {
+    margin: 20px; /* Esto asegura que haya un margen en la pantalla más grande */
+}
+
+.container {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input:disabled {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;   
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.regresar {
+    margin-top: 20px;
+    background-color: #4592a0;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.regresar:hover {
+    background-color: rgb(33, 85, 134);
+}
+
+.guardar-pdf {
+    background-color: #175b1b;
+    margin-top: 20px;
+    position: relative;
+    left: 100px;
+    top: 20px;
+
+}
+
+.guardar-pdf:hover {
+    background-color: #333;
+}
+
+.results {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e7f7e7;
+    border-radius: 5px;
+}
+
+.results p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.results strong {
+    color: #2c6e2f;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .results-container {
+        margin: 10px; /* Reduces el margen para que el contenido no esté pegado a la pantalla */
+    }
+
+    /* Asegura que el botón esté siempre en la esquina superior izquierda en dispositivos pequeños */
+    .regresar {
+        position: fixed; /* Fija el botón para que no se mueva al hacer scroll */
+        left: 10px;
+        top: 10px;
+    }
+
+    /* Otros ajustes generales para dispositivos móviles */
+    .results {
+        padding: 10px;
+        font-size: 14px; /* Puedes reducir el tamaño del texto si es necesario */
+    }
+}

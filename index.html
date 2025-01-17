@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculadora Pensión</title>
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Pensión</h1>
+      </header>
+      
+      <main>
+        <form id="calculadora-form" action="calculadora.php" method="POST">
+            <div>
+              <label for="edad">Edad:</label>
+              <input type="number" id="edad" name="edad" placeholder="Ingresa tu edad" required>
+            </div>
+            
+            <div>
+              <label for="semanas">Semanas cotizadas:</label>
+              <input type="number" id="semanas" name="semanas_cotizadas" placeholder="Ingresa semanas cotizadas" required>
+            </div>
+            
+            <div>
+              <label for="sbc">Salario Base de Cotización (SBC):</label>
+              <input type="number" id="sbc" name="salario_base" placeholder="Ingresa tu SBC mensual" step="0.01" required>
+            </div>
+            
+            <div>
+              <label for="modalidad40">¿Usar Modalidad 40?</label>
+              <select id="modalidad40" name="modalidad40">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="anios-modalidad40">Años en Modalidad 40 (si aplica):</label>
+              <input type="number" id="anios-modalidad40" name="anios_modalidad40" placeholder="Ingresa años en Modalidad 40" disabled>
+            </div>
+            
+            <button type="submit">Calcular</button>
+          </form>
+          
+      </main>
+      
+      <footer>
+        <p>Calculadora basada en datos de enero 2025, México.</p>
+      </footer>
+      
+      <script src="js/script.js"></script>
+</body>
+</html>
