@@ -1,116 +1,162 @@
 /* Estilo general */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-  }
-  
-  h1, h2 {
-    color: #333;
-  }
-  
-  .container {
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 600px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  label {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  input, select {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-  }
-  
-  input:disabled {
-    background-color: #f2f2f2;
-  }
-  
-  button {
-    padding: 12px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  .results {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #e7f7e7;
-    border-radius: 5px;
-  }
-  
-  .results p {
-    margin: 5px 0;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .results strong {
-    color: #2c6e2f;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+.container {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Estilos del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+input, select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input:disabled {
+  background-color: #f2f2f2;
+}
+
+/* Estilo del botón del formulario */
+form button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #4CAF50; /* Color específico para el botón del formulario */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos de los resultados */
+.results-container {
+  display: none; /* Oculto inicialmente */
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.results {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e7f7e7;
+  border-radius: 5px;
+}
+
+.results p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.results strong {
+  color: #2c6e2f;
+}
+
+/* Estilo del botón de guardar en PDF dentro de los resultados */
+.results-container .guardar-pdf {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff; /* Color diferente para el botón de resultados */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.results-container .guardar-pdf:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo del botón "Volver" dentro de los resultados */
+.results-container #volver {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #f44336; /* Color diferente para el botón "Volver" */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.results-container #volver:hover {
+  background-color: #d32f2f;
+}
+
 /* Media Query para dispositivos móviles */
 @media (max-width: 768px) {
-    body {
-        height: auto;
-        padding: 10px; /* Añadir un poco de padding para móviles */
-    }
+  body {
+      height: auto;
+      padding: 10px; /* Añadir un poco de padding para móviles */
+  }
 
-    .container {
-        max-width: 100%;
-        padding: 15px; /* Reducir padding en dispositivos pequeños */
-    }
+  .container {
+      max-width: 100%;
+      padding: 15px; /* Reducir padding en dispositivos pequeños */
+  }
 
-    form {
-        gap: 10px; /* Reducir espacio entre campos en móviles */
-    }
+  form {
+      gap: 10px; /* Reducir espacio entre campos en móviles */
+  }
 
-    label {
-        font-size: 14px; /* Reducir tamaño de las etiquetas */
-    }
+  label {
+      font-size: 14px; /* Reducir tamaño de las etiquetas */
+  }
 
-    input, select {
-        font-size: 14px; /* Reducir el tamaño de los campos de entrada */
-        padding: 8px; /* Reducir padding en campos de entrada */
-    }
+  input, select {
+      font-size: 14px; /* Reducir el tamaño de los campos de entrada */
+      padding: 8px; /* Reducir padding en campos de entrada */
+  }
 
-    button {
-        padding: 10px; /* Reducir padding del botón */
-        font-size: 14px; /* Reducir tamaño del texto en el botón */
-    }
+  button {
+      padding: 10px; /* Reducir padding del botón */
+      font-size: 14px; /* Reducir tamaño del texto en el botón */
+  }
 
-    .results p {
-        font-size: 14px; /* Reducir tamaño de texto en los resultados */
-    }
+  .results p {
+      font-size: 14px; /* Reducir tamaño de texto en los resultados */
+  }
 }

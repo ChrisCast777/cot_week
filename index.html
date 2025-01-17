@@ -5,51 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Calculadora Pensión</title>
-</head>
-<body>
-    <header>
-        <h1>Calculadora de Pensión</h1>
+  </head>
+  <body>
+      <header>
+          <h1>Calculadora de Pensión</h1>
       </header>
       
       <main>
-        <form id="calculadora-form" action="calculadora.php" method="POST">
+        <form id="calculadora-form" action="#" method="POST">
             <div>
-              <label for="edad">Edad:</label>
-              <input type="number" id="edad" name="edad" placeholder="Ingresa tu edad" required>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" placeholder="Ingresa tu edad" required>
             </div>
-            
             <div>
-              <label for="semanas">Semanas cotizadas:</label>
-              <input type="number" id="semanas" name="semanas_cotizadas" placeholder="Ingresa semanas cotizadas" required>
+                <label for="semanas">Semanas cotizadas:</label>
+                <input type="number" id="semanas" name="semanas_cotizadas" placeholder="Ingresa semanas cotizadas" required>
             </div>
-            
             <div>
-              <label for="sbc">Salario Base de Cotización (SBC):</label>
-              <input type="number" id="sbc" name="salario_base" placeholder="Ingresa tu SBC mensual" step="0.01" required>
+                <label for="sbc">Salario Base de Cotización (SBC):</label>
+                <input type="number" id="sbc" name="salario_base" placeholder="Ingresa tu SBC mensual" step="0.01" required>
             </div>
-            
             <div>
               <label for="modalidad40">¿Usar Modalidad 40?</label>
-              <select id="modalidad40" name="modalidad40">
-                <option value="si">Sí</option>
-                <option value="no">No</option>
-              </select>
+              <select id="modalidad40" name="modalidad40" required>
+                  <option value="" disabled selected>Selecciona una opción</option>
+                  <option value="si">Sí</option>
+                  <option value="no">No</option>
+              </select>              
             </div>
-            
             <div>
               <label for="anios-modalidad40">Años en Modalidad 40 (si aplica):</label>
-              <input type="number" id="anios-modalidad40" name="anios_modalidad40" placeholder="Ingresa años en Modalidad 40" disabled>
-            </div>
-            
-            <button type="submit">Calcular</button>
-          </form>
+              <input type="number" id="anios-modalidad40" name="anios_modalidad40" placeholder="Ingresa años en Modalidad 40" disabled required>
+          </div>
           
-      </main>
+            <button type="submit">Calcular</button>
+        </form>
+    
+        <!-- Contenedor de resultados, inicialmente oculto -->
+        <div class="results-container" id="results-container" style="display: none;">
+            <h1>Resultado</h1>
+            <div class="results">
+                <p><strong>Edad:</strong> <span id="edad-result"></span> años</p>
+                <p><strong>Semanas Cotizadas:</strong> <span id="semanas-result"></span></p>
+                <p><strong>Salario Base de Cotización (SBC):</strong> $ <span id="sbc-result"></span></p>
+                <p><strong>Costo Modalidad 40:</strong> $ <span id="modalidad40-result"></span></p>
+                <p><strong>Años en Modalidad 40:</strong> <span id="anios-modalidad40-result"></span> años</p>
+            </div>
+            <button class="guardar-pdf" id="guardarPDF">Guardar en PDF</button>
+            <button id="volver">Volver</button>
+        </div>
+    </main>
+    
       
       <footer>
-        <p>Calculadora basada en datos de enero 2025, México.</p>
+          <p>Calculadora basada en datos de enero 2025, México.</p>
       </footer>
       
-      <script src="js/script.js"></script>
+      <script src="js/script2.js"></script>
 </body>
 </html>
